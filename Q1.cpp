@@ -1,18 +1,17 @@
 #include <iostream>
-#include <string>
-
+#include <algorithm>
 using namespace std;
 
-int main() {
-    string str1, str2;
-    int pos = -1;
-
-    getline(cin, str1);
-    getline(cin, str2);
-
-    while ((pos = str1.find(str2, pos+1)) != string::npos) {
-        cout << pos+1 << ' ';
+int main(){
+    int n;
+    cin >> n;
+    string str[n];
+    for(int i=0;i<n;i++){
+        cin >> str[i];
     }
-    cout << endl;
+    sort(str,str+n);
+    for(int i=0;i<n;i++){
+        cout << str[i] << endl;
+    }
     return 0;
 }

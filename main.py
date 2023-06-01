@@ -27,14 +27,14 @@ for input_file in input_files:
     output_path = os.path.join(output_dir, output_file)
 
     # 讀取 .in 文件中的輸入
-    with open(input_path, 'r') as f:
+    with open(input_path, 'r',encoding='utf-8') as f:
         input_data = f.read()
 
     # 執行 C++ 程序並獲取輸出
     result = subprocess.run(['./Q1'], input=input_data.encode(), stdout=subprocess.PIPE)
     # result = subprocess.run([my_cpp_code_exe], input=input_data.encode(), stdout=subprocess.PIPE)
 
-    # 測試1
+    # 測試1：失敗
     # # 執行 C++ 程序並獲取輸出
     # result = subprocess.run(['./Q1'], input=input_data.encode(), stdout=subprocess.PIPE)
     
@@ -44,15 +44,19 @@ for input_file in input_files:
     # # 將輸出寫入到 .out 文件中
     # with open(output_path, 'w') as f:
     #     f.write(output.rstrip())
-    
-    # 測試2
-    # 將輸出寫入到 .out 文件中
-    with open(output_path, 'wb') as f:
-        f.write(result.stdout)
         
-    # 測試3
+    # 測試2：失敗
     # # 將輸出寫入到 .out 文件中
     # with open(output_path, 'wb') as f:
     #     f.write(result.stdout.rstrip() + b'\n')
+    
+    # 測試3：可以用於沒有中文的情況
+    # # 將輸出寫入到 .out 文件中
+    # with open(output_path, 'wb') as f:
+    #     f.write(result.stdout)
         
+    # 測試4：可以有中文輸出
+    # 將輸出寫入到 .out 文件中
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(result.stdout.decode('big5'))
 
