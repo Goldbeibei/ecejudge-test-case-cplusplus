@@ -1,14 +1,18 @@
 #include <iostream>
+#include <string>
+
 using namespace std;
 
 int main() {
-    char ch;
-    cin >> ch;
-    for(char i ='A';i<=ch;i++){
-        for(char j='A';j<i;j++){
-            cout << ' ';
-        }
-        cout << i <<endl;
+    string str1, str2;
+    int pos = -1;
+
+    getline(cin, str1);
+    getline(cin, str2);
+
+    while ((pos = str1.find(str2, pos+1)) != string::npos) {
+        cout << pos+1 << ' ';
     }
+    cout << endl;
     return 0;
 }
