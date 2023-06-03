@@ -1,22 +1,28 @@
-#include <iostream>
-#include <cmath>
-#include <iomanip>
+#include <bits/stdc++.h>
 using namespace std;
-
 int main() {
-long long a, b; // ㄏノlong longや?
-int N;
-cin >> a >> b >> N;
-    
-double result = 1.0*a/b;
-
-int mult = 1;
-for(int i = 0; i < N; i++){
-    mult *= 10;
-}
-
-result = round(result * mult) / mult;
-
-cout << fixed << setprecision(N) << result << endl;  
-return 0;
+    long long a,b,c;
+    cin >> a >> b >> c;
+	if (b == 0) {
+	    cout << "埃计ぃ 0" << endl;
+	} 
+	else {
+	    long long dividend = a;
+	    long long divisor = b;
+	    long long quotient = 0;
+	    long long remainder = 0;
+	    long long temp_dividend = 0;
+	    long long temp_quotient = 0;
+		
+		//璸衡俱计场だ緇计
+		cout << dividend/divisor << ".";
+		quotient = dividend%divisor;
+		//计埃猭 
+		for(int i=0;i<c;i++){
+			quotient*=10;
+			cout << quotient/divisor; 
+			quotient%=divisor;
+		}
+	}
+	return 0;
 }
