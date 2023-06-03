@@ -1,28 +1,20 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
+ 
 int main() {
-    long long a,b,c;
-    cin >> a >> b >> c;
-	if (b == 0) {
-	    cout << "埃计ぃ 0" << endl;
-	} 
-	else {
-	    long long dividend = a;
-	    long long divisor = b;
-	    long long quotient = 0;
-	    long long remainder = 0;
-	    long long temp_dividend = 0;
-	    long long temp_quotient = 0;
-		
-		//璸衡俱计场だ緇计
-		cout << dividend/divisor << ".";
-		quotient = dividend%divisor;
-		//计埃猭 
-		for(int i=0;i<c;i++){
-			quotient*=10;
-			cout << quotient/divisor; 
-			quotient%=divisor;
-		}
-	}
-	return 0;
+    int N;
+    while (cin >> N) {
+        int sum = 0;
+        for (int i = 1; i < N; i++) {
+            if (N % i == 0)
+                sum += i;
+        }
+        if (sum > N)
+            cout << "计\n";
+        else if (sum == N)
+            cout << "Ч计\n";
+        else
+            cout << "莲计\n";
+    }
+    return 0;
 }

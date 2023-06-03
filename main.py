@@ -1,4 +1,12 @@
 # -*- coding: utf-8 -*-
+
+# 使用者設定--------------------------------------------
+# 中文測資輸出(預設為True)
+no_zh_output = True
+
+
+# ----------------------------------------------------
+
 import os
 # import re
 import subprocess
@@ -52,11 +60,14 @@ for input_file in input_files:
     
     # 測試3：可以用於沒有中文的情況
     # 將輸出寫入到 .out 文件中
-    with open(output_path, 'wb') as f:
-        f.write(result.stdout)
+    if no_zh_output:
+        with open(output_path, 'wb') as f:
+            f.write(result.stdout)
         
     # 測試4：可以有中文輸出(會導致無中文輸出測資有換行時多換一行)
-    # # 將輸出寫入到 .out 文件中
-    # with open(output_path, 'w', encoding='utf-8') as f:
-    #     f.write(result.stdout.decode('big5'))
+    # 將輸出寫入到 .out 文件中
+    else :
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write(result.stdout.decode('big5'))
 
+print("完成")
