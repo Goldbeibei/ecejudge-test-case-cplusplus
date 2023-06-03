@@ -15,6 +15,22 @@ import subprocess
 # my_cpp_code_exe = "'./"+input("C++的編譯後程式名稱：")+"'"
 # print(my_cpp_code_exe)
 
+# 設置預設的 .exe 檔案名稱
+default_exe_name = "ans"
+
+# 詢問使用者要執行的 .exe 檔案名稱，並顯示預設值
+while True:
+    exe_name = input("請輸入要執行的 .exe 檔案名稱(預設為 " + default_exe_name + ")：") or default_exe_name
+    exe_path = "./" + exe_name
+    exe_path_exe = exe_path + ".exe"
+    if os.path.isfile(exe_path_exe):
+        break
+    else:
+        print("檔案不存在，請輸入正確的檔案名稱。")
+        exe_path = ""
+        exe_path_exe = ""
+        
+
 # 判斷路徑輸入路徑是否存在，若不存在則繼續要求輸入
 while True:
     try:
@@ -49,7 +65,7 @@ for input_file in input_files:
         input_data = f.read()
 
     # 執行 C++ 程序並獲取輸出
-    result = subprocess.run(['./Q1'], input=input_data.encode(), stdout=subprocess.PIPE)
+    result = subprocess.run([exe_path], input=input_data.encode(), stdout=subprocess.PIPE)
     # result = subprocess.run([my_cpp_code_exe], input=input_data.encode(), stdout=subprocess.PIPE)
 
     # 測試1：失敗
