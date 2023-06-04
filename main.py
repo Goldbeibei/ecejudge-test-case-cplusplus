@@ -2,7 +2,7 @@
 
 # 使用者設定--------------------------------------------
 # 中文測資輸出(預設為True)
-no_zh_output = True
+no_zh_output = False
 
 
 # ----------------------------------------------------
@@ -97,3 +97,19 @@ for input_file in input_files:
             f.write(result.stdout.decode('big5'))
 
 print("完成")
+
+# 查看輸出.out編碼，使其若非UTF-8則刪除檔案
+import chardet
+
+for input_file in input_files:
+    # 確定 .in 文件的完整路徑
+    input_path = os.path.join(input_dir, input_file)
+
+    # 確定 .out 文件的完整路徑
+    output_file = input_file.replace('.in', '.out')
+    output_path = os.path.join(output_dir, output_file)
+    # 讀取檔案並檢測編碼格式
+    with open(output_path, 'rb') as f:
+        result = chardet.detect(f.read())
+    # 顯示編碼格式
+    print(output_file +"："+ result['encoding'])
