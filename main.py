@@ -2,7 +2,7 @@
 
 # 使用者設定--------------------------------------------
 # 中文測資輸出(預設為True)
-no_zh_output = False
+no_zh_output = True
 
 
 # ----------------------------------------------------
@@ -111,5 +111,8 @@ for input_file in input_files:
     # 讀取檔案並檢測編碼格式
     with open(output_path, 'rb') as f:
         result = chardet.detect(f.read())
-    # 顯示編碼格式
-    print(output_file +"："+ result['encoding'])
+    # 顯示編碼格式(區分是utf-8或不是，不是則印出Error)
+    if not result['encoding'] ==  "utf-8":
+        print(output_file +"："+ "Error")
+    else :
+        print(output_file +"："+ result['encoding'])
