@@ -39,14 +39,6 @@ class TestLogin():
     self.driver.find_element(By.CSS_SELECTOR, ".btn").click()
     # 9 | waitForElementPresent | css=.logo | 3000
     WebDriverWait(self.driver, 3).until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".logo")))
-    # 10 | open | https://120.101.8.132/admin/ | 
-    self.driver.get("https://120.101.8.132/admin/")
-    # 11 | waitForElementPresent | css=.el-submenu:nth-child(4) > .el-submenu__title | 3000
-    WebDriverWait(self.driver, 3).until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".el-submenu:nth-child(4) > .el-submenu__title")))
-    # 12 | click | css=.el-submenu:nth-child(4) > .el-submenu__title | 
-    self.driver.find_element(By.CSS_SELECTOR, ".el-submenu:nth-child(4) > .el-submenu__title").click()
-    # 13 | waitForElementPresent | css=.is-active > font > font | 3000
-    WebDriverWait(self.driver, 3).until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".is-active > font > font")))
-    # 14 | click | css=.is-opened .el-menu-item:nth-child(2) > font > font | 
-    self.driver.find_element(By.CSS_SELECTOR, ".is-opened .el-menu-item:nth-child(2) > font > font").click()
+    # 10 | open | https://120.101.8.132/admin/problem/create/ | 
+    self.driver.get("https://120.101.8.132/admin/problem/create/")
   

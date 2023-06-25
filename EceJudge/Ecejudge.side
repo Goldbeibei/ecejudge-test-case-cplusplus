@@ -102,52 +102,8 @@
       "id": "c5d45c6a-3e80-4edb-9d8e-2aaf15aa8aee",
       "comment": "",
       "command": "open",
-      "target": "https://120.101.8.132/admin/",
+      "target": "https://120.101.8.132/admin/problem/create/",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "37506aa7-6cf6-495a-bfc9-1ee553b837a6",
-      "comment": "",
-      "command": "waitForElementPresent",
-      "target": "css=.el-submenu:nth-child(4) > .el-submenu__title",
-      "targets": [
-        ["css=.el-submenu:nth-child(4) > .el-submenu__title", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/ul/li[3]/div", "xpath:idRelative"],
-        ["xpath=//li[3]/div", "xpath:position"]
-      ],
-      "value": "3000"
-    }, {
-      "id": "b7a2bef3-6ce3-41d7-a89a-14818a591a11",
-      "comment": "",
-      "command": "click",
-      "target": "css=.el-submenu:nth-child(4) > .el-submenu__title",
-      "targets": [
-        ["css=.el-submenu:nth-child(4) > .el-submenu__title", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/ul/li[3]/div", "xpath:idRelative"],
-        ["xpath=//li[3]/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "3b657f93-e41a-4938-94e7-9adeb49aab9a",
-      "comment": "",
-      "command": "waitForElementPresent",
-      "target": "css=.is-active > font > font",
-      "targets": [
-        ["css=.is-active > font > font", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/ul/li[3]/ul/li[2]/font/font", "xpath:idRelative"],
-        ["xpath=//li[3]/ul/li[2]/font/font", "xpath:position"]
-      ],
-      "value": "3000"
-    }, {
-      "id": "89cc6157-2f03-4722-aea7-20f8a11b3a34",
-      "comment": "",
-      "command": "click",
-      "target": "css=.is-opened .el-menu-item:nth-child(2) > font > font",
-      "targets": [
-        ["css=.is-opened .el-menu-item:nth-child(2) > font > font", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/ul/li[3]/ul/li[2]/font/font", "xpath:idRelative"],
-        ["xpath=//li[3]/ul/li[2]/font/font", "xpath:position"]
-      ],
       "value": ""
     }]
   }, {
