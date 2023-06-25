@@ -1,0 +1,205 @@
+{
+  "id": "53162405-d54d-478c-bd9c-07505aaccb80",
+  "version": "2.0",
+  "name": "Ecejudge",
+  "url": "http://120.101.8.132/",
+  "tests": [{
+    "id": "c3255e47-1782-4d17-9bee-504a2ab502ae",
+    "name": "login",
+    "commands": [{
+      "id": "382c88d7-d7cf-4ede-aa3b-b920e30ec17c",
+      "comment": "",
+      "command": "open",
+      "target": "https://120.101.8.132/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "033b6d41-c9cc-4c1d-878e-fe550f8557b5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "968x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bfc10e61-f36c-4d3b-a3e3-71775ea9f106",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ivu-btn-ghost > span",
+      "targets": [
+        ["css=.ivu-btn-ghost > span", "css:finder"],
+        ["xpath=//div[@id='header']/ul/div[3]/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'登入')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "86cd8227-2469-4325-9b76-17990caa2aa4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ivu-input-type-text > .ivu-input",
+      "targets": [
+        ["css=.ivu-input-type-text > .ivu-input", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c2424ad-e79c-4b89-9243-d9d562e22dab",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ivu-input-type-text > .ivu-input",
+      "targets": [
+        ["css=.ivu-input-type-text > .ivu-input", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jefery"
+    }, {
+      "id": "57c1dcaf-9176-4cc0-a70c-139c59d287c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ivu-input-type-password > .ivu-input",
+      "targets": [
+        ["css=.ivu-input-type-password > .ivu-input", "css:finder"],
+        ["xpath=//input[@type='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b71b158-b34f-4799-be21-5ee30deafd05",
+      "comment": "",
+      "command": "type",
+      "target": "css=.ivu-input-type-password > .ivu-input",
+      "targets": [
+        ["css=.ivu-input-type-password > .ivu-input", "css:finder"],
+        ["xpath=//input[@type='password']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "jeferywbl"
+    }, {
+      "id": "e5a250a6-2a86-426c-a8ee-cbcd90b23210",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e77781b-3592-45c9-bd75-b232d3a34af1",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.logo",
+      "targets": [
+        ["css=.logo", "css:finder"],
+        ["xpath=//div[@id='header']/ul/div", "xpath:idRelative"],
+        ["xpath=//ul/div", "xpath:position"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "c5d45c6a-3e80-4edb-9d8e-2aaf15aa8aee",
+      "comment": "",
+      "command": "open",
+      "target": "https://120.101.8.132/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "37506aa7-6cf6-495a-bfc9-1ee553b837a6",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.el-submenu:nth-child(4) > .el-submenu__title",
+      "targets": [
+        ["css=.el-submenu:nth-child(4) > .el-submenu__title", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/ul/li[3]/div", "xpath:idRelative"],
+        ["xpath=//li[3]/div", "xpath:position"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "b7a2bef3-6ce3-41d7-a89a-14818a591a11",
+      "comment": "",
+      "command": "click",
+      "target": "css=.el-submenu:nth-child(4) > .el-submenu__title",
+      "targets": [
+        ["css=.el-submenu:nth-child(4) > .el-submenu__title", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/ul/li[3]/div", "xpath:idRelative"],
+        ["xpath=//li[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b657f93-e41a-4938-94e7-9adeb49aab9a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.is-active > font > font",
+      "targets": [
+        ["css=.is-active > font > font", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/ul/li[3]/ul/li[2]/font/font", "xpath:idRelative"],
+        ["xpath=//li[3]/ul/li[2]/font/font", "xpath:position"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "89cc6157-2f03-4722-aea7-20f8a11b3a34",
+      "comment": "",
+      "command": "click",
+      "target": "css=.is-opened .el-menu-item:nth-child(2) > font > font",
+      "targets": [
+        ["css=.is-opened .el-menu-item:nth-child(2) > font > font", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/ul/li[3]/ul/li[2]/font/font", "xpath:idRelative"],
+        ["xpath=//li[3]/ul/li[2]/font/font", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "c39142bb-40e6-4673-8790-3f22bcafd0d6",
+    "name": "logout",
+    "commands": [{
+      "id": "e3e713bd-5e36-4dea-afce-9e061b8f3f72",
+      "comment": "",
+      "command": "open",
+      "target": "https://120.101.8.132/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8721f04b-8ec3-443f-926c-f38c14f70fae",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "968x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08cdb4ff-7d18-408d-8faf-6b5a27620d70",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ivu-icon-md-arrow-dropdown",
+      "targets": [
+        ["css=.ivu-icon-md-arrow-dropdown", "css:finder"],
+        ["xpath=//div[@id='header']/ul/div[3]/div/button/span/i", "xpath:idRelative"],
+        ["xpath=//span/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "924a95ea-c1ca-4486-bf81-981c0c445781",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ivu-dropdown-item-divided",
+      "targets": [
+        ["css=.ivu-dropdown-item-divided", "css:finder"],
+        ["xpath=//div[@id='header']/ul/div[3]/div[2]/ul/li[5]", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/ul/li[5]", "xpath:position"],
+        ["xpath=//li[contains(.,'登出')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "935aa214-306d-4893-8afd-989ccc38ccf3",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://120.101.8.132/", "http://120.101.8.132/"],
+  "plugins": []
+}
