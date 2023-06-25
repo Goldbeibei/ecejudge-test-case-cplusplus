@@ -1,0 +1,120 @@
+{
+  "id": "cd1e0855-7011-4894-ba3d-1d11dc94ea79",
+  "version": "2.0",
+  "name": "APCS",
+  "url": "https://yuihuang.com/apcs/",
+  "tests": [{
+    "id": "20c44f84-3ded-4640-a2f1-0b8e14a063d9",
+    "name": "yuihuang",
+    "commands": [{
+      "id": "feed1f5a-0f97-4f7b-8107-bae6331d4bd5",
+      "comment": "",
+      "command": "open",
+      "target": "https://yuihuang.com/apcs/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06e10e9f-e235-48b0-9d3b-0a0b8a9d799e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "968x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce67b1be-af8e-4bc7-acfe-c8903f837779",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=路徑偵測",
+      "targets": [
+        ["linkText=路徑偵測", "linkText"],
+        ["css=tr:nth-child(1) > td:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'路徑偵測')]", "xpath:link"],
+        ["xpath=//article[@id='post-13513']/div/figure[2]/table/tbody/tr/td[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://zerojudge.tw/ShowProblem?problemid=k731')]", "xpath:href"],
+        ["xpath=//td[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'路徑偵測')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win2629",
+      "windowTimeout": 2000
+    }, {
+      "id": "ac66af63-cf0b-4d70-94da-b005b538ef28",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c51de906-8785-4e80-8313-95c576ec9f97",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win2629}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5af24889-c7ea-431e-acb7-fb2b51939784",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55696fb8-a1f7-43ea-86c5-b55e5fdf1714",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9db23195-2f18-430d-9095-c813724cbf78",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=特殊位置",
+      "targets": [
+        ["linkText=特殊位置", "linkText"],
+        ["css=tr:nth-child(2) a", "css:finder"],
+        ["xpath=//a[contains(text(),'特殊位置')]", "xpath:link"],
+        ["xpath=//article[@id='post-13513']/div/figure[2]/table/tbody/tr[2]/td[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://zerojudge.tw/ShowProblem?problemid=k732')]", "xpath:href"],
+        ["xpath=//tr[2]/td[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'特殊位置')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win325",
+      "windowTimeout": 2000
+    }, {
+      "id": "4bf08b95-7e1c-4375-af98-eac9469802d5",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win325}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "47e938b8-2d33-4e2c-99a9-692fdefa067c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d4fa354-0ca4-4a4e-913f-128a26b452c2",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9a2d1986-616f-40a6-b039-91ff31c8c301",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["20c44f84-3ded-4640-a2f1-0b8e14a063d9"]
+  }],
+  "urls": ["https://yuihuang.com/apcs/"],
+  "plugins": []
+}
