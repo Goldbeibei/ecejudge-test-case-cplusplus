@@ -23,7 +23,8 @@ class TestYuihuang():
     self.vars = {}
   
   def teardown_method(self, method):
-    self.driver.quit()
+    print("Error")
+    # self.driver.quit()
   
   def wait_for_window(self, timeout = 2):
     time.sleep(round(timeout / 1000))
@@ -43,22 +44,34 @@ class TestYuihuang():
     self.vars["window_handles"] = self.driver.window_handles
     # 4 | storeWindowHandle | root | 
     self.driver.find_element(By.LINK_TEXT, "路徑偵測").click()
-    # 5 | selectWindow | handle=${win2629} | 
-    self.vars["win2629"] = self.wait_for_window(2000)
-    # 6 | close |  | 
-    self.vars["root"] = self.driver.current_window_handle
-    # 7 | selectWindow | handle=${root} | 
-    self.driver.switch_to.window(self.vars["win2629"])
-    # 8 | click | linkText=特殊位置 | 
+    # 強制等待1秒
+    time.sleep(1)
+    # 關閉標籤頁(使用ctrl+w快速鍵)(失敗)
+    # ActionChains(self.driver).key_down(Keys.CONTROL).send_keys("w").key_up(Keys.CONTROL).perform()
+    # 關閉標籤頁(先切換到第二個畫面再關閉)
+    self.driver.switch_to.window(self.driver.window_handles[1])
     self.driver.close()
-    # 9 | selectWindow | handle=${win325} | 
-    self.driver.switch_to.window(self.vars["root"])
-    # 10 | close |  | 
-    self.vars["window_handles"] = self.driver.window_handles
-    # 11 | selectWindow | handle=${root} | 
-    self.driver.find_element(By.LINK_TEXT, "特殊位置").click()
-    self.vars["win325"] = self.wait_for_window(2000)
-    self.driver.switch_to.window(self.vars["win325"])
+    time.sleep(1)
+    self.driver.switch_to.window(self.driver.window_handles[0])
     self.driver.close()
-    self.driver.switch_to.window(self.vars["root"])
+    
+    
+    # # 5 | selectWindow | handle=${win2629} | 
+    # self.vars["win2629"] = self.wait_for_window(2000)
+    # # 6 | close |  | 
+    # self.vars["root"] = self.driver.current_window_handle
+    # # 7 | selectWindow | handle=${root} | 
+    # self.driver.switch_to.window(self.vars["win2629"])
+    # # 8 | click | linkText=特殊位置 | 
+    # self.driver.close()
+    # # 9 | selectWindow | handle=${win325} | 
+    # self.driver.switch_to.window(self.vars["root"])
+    # # 10 | close |  | 
+    # self.vars["window_handles"] = self.driver.window_handles
+    # # 11 | selectWindow | handle=${root} | 
+    # self.driver.find_element(By.LINK_TEXT, "特殊位置").click()
+    # self.vars["win325"] = self.wait_for_window(2000)
+    # self.driver.switch_to.window(self.vars["win325"])
+    # self.driver.close()
+    # self.driver.switch_to.window(self.vars["root"])
   
