@@ -24,7 +24,7 @@
       "id": "ce67b1be-af8e-4bc7-acfe-c8903f837779",
       "comment": "",
       "command": "click",
-      "target": "linkText=路徑偵測",
+      "target": "xpath=//article[@id='post-13513']/div/figure[2]/table/tbody/tr/td[5]/a",
       "targets": [
         ["linkText=路徑偵測", "linkText"],
         ["css=tr:nth-child(1) > td:nth-child(5) > a", "css:finder"],
@@ -70,7 +70,7 @@
       "id": "9db23195-2f18-430d-9095-c813724cbf78",
       "comment": "",
       "command": "click",
-      "target": "linkText=特殊位置",
+      "target": "xpath=//article[@id='post-13513']/div/figure[2]/table/tbody/tr[2]/td[5]/a",
       "targets": [
         ["linkText=特殊位置", "linkText"],
         ["css=tr:nth-child(2) a", "css:finder"],

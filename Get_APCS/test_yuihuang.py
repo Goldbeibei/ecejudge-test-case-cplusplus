@@ -32,24 +32,24 @@ class TestYuihuang():
     self.driver.get("https://yuihuang.com/apcs/")
     # 2 | setWindowSize | 968x1020 | 
     self.driver.set_window_size(968, 1020)
-    # 3 | click | linkText=路徑偵測 | 
+    # 3 | click | xpath=//article[@id='post-13513']/div/figure[2]/table/tbody/tr/td[5]/a | 
     self.vars["window_handles"] = self.driver.window_handles
     # 4 | storeWindowHandle | root | 
-    self.driver.find_element(By.LINK_TEXT, "路徑偵測").click()
+    self.driver.find_element(By.XPATH, "//article[@id=\'post-13513\']/div/figure[2]/table/tbody/tr/td[5]/a").click()
     # 5 | selectWindow | handle=${win2629} | 
     self.vars["win2629"] = self.wait_for_window(2000)
     # 6 | close |  | 
     self.vars["root"] = self.driver.current_window_handle
     # 7 | selectWindow | handle=${root} | 
     self.driver.switch_to.window(self.vars["win2629"])
-    # 8 | click | linkText=特殊位置 | 
+    # 8 | click | xpath=//article[@id='post-13513']/div/figure[2]/table/tbody/tr[2]/td[5]/a | 
     self.driver.close()
     # 9 | selectWindow | handle=${win325} | 
     self.driver.switch_to.window(self.vars["root"])
     # 10 | close |  | 
     self.vars["window_handles"] = self.driver.window_handles
     # 11 | selectWindow | handle=${root} | 
-    self.driver.find_element(By.LINK_TEXT, "特殊位置").click()
+    self.driver.find_element(By.XPATH, "//article[@id=\'post-13513\']/div/figure[2]/table/tbody/tr[2]/td[5]/a").click()
     self.vars["win325"] = self.wait_for_window(2000)
     self.driver.switch_to.window(self.vars["win325"])
     self.driver.close()
